@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Shaik Ummar Farooq, a skilled Linux administrator, AWS professional, and software developer with expertise in cloud platforms, programming languages, and database management.">
+    <meta name="keywords" content="Linux, AWS, Python, SQL, Cloud, DevOps, System Administration, Git, GitHub, AWS VPC, Projects, Portfolio">
+    <meta name="author" content="Shaik Ummar Farooq">
+    <title>My Portfolio</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e3b8b8;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 0.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 2rem;
+            margin: auto;
+            max-width: 1200px;
+            color: #333;
+        }
+
+        .intro {
+            padding: 2rem;
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+        }
+
+        .intro p {
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 2rem 0;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .hero img {
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            width: 150px;
+            height: 150px;
+        }
+
+        .hero h1 {
+            margin-bottom: 1rem;
+            animation: textAnimation 2s infinite alternate;
+            color: #FFD700;
+        }
+
+        @keyframes textAnimation {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .skills,
+        .projects,
+        .contact {
+            margin-top: 2rem;
+        }
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .skills h2 {
+            grid-column: span 3;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .skills .column {
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .skills .column h3 {
+            text-align: center;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .skills ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .skills li {
+            padding: 0.5rem;
+            font-size: 1.1rem;
+            color: white;
+        }
+
+        .skills li:hover {
+            color: #FFD700;
+        }
+
+        .cloud {
+            background-color: #5285bd;
+        }
+
+        .programming {
+            background-color: #6ea87d;
+        }
+
+        .databases {
+            background-color: #dc0fb0;
+        }
+
+        .os {
+            background-color: #6f42c1;
+        }
+
+        .version-control {
+            background-color: #974579;
+        }
+
+        .tools {
+            background-color: #17a2b8;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+
+        .projects h2 {
+            grid-column: 1 / -1;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .project {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: black;
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+
+        .project:hover {
+            transform: scale(1.05);
+        }
+
+        .project img {
+            width: 100%;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .project img:hover {
+            transform: scale(1.05);
+        }
+
+        .project1 {
+            background-color: #e7f1ff;
+        }
+
+        .project2 {
+            background-color: #ffe6e6;
+        }
+
+        .project3 {
+            background-color: #e6ffed;
+        }
+
+        .testimonials,
+        .achievements {
+            margin-top: 2rem;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .testimonials p,
+        .achievements ul {
+            font-size: 1.2rem;
+        }
+
+        .testimonials {
+            background-color: #f8d7da; /* Light red background */
+        }
+
+        .achievements {
+            background-color: #d4edda; /* Light green background */
+        }
+
+        footer {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            color: white;
+            background-color: #007BFF;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 1rem;
+        }
+
+        .button:hover {
+            background-color: #0f323a;
+        }
+
+        .social a {
+            margin: 0 1rem;
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+
+        .social a:hover {
+            color: #FFD700;
+        }
+
+        /* Mobile Responsiveness */
+        @media screen and (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .skills {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+            .social a {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+    </header>
+
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero" id="about">
+        <img src="https://example.com/your-image.jpg" alt="Your Profile">
+        <h1>Hello, I'm <span style="animation: textAnimation 2s infinite alternate;">Shaik Ummar Farooq</span></h1>
+        <p><b>A Technically skilled fresher with expertise in Linux administration, AWS cloud services, Python, SQL, Shell Scripting, and Version Control tools like Git & GitHub. Proficient in deploying scalable architectures, automating processes, and managing networking and security. Eager to contribute to innovative IT solutions in dynamic environments.</b></p>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <h2>Skills</h2>
+        <div class="column cloud">
+            <h3>Cloud Platforms</h3>
+            <ul>
+                <li>Linux (Ubuntu, CentOS)</li>
+                <li>AWS (VPC, EC2, S3, IAM)</li>
+                <li>Shell Scripting</li>
+            </ul>
+        </div>
+        <div class="column programming">
+            <h3>Programming Languages</h3>
+            <ul>
+                <li>Python</li>
+                <li>C++</li>
+            </ul>
+        </div>
+        <div class="column databases">
+            <h3>Databases</h3>
+            <ul>
+                <li>MySQL</li>
+                <li>SQL</li>
+            </ul>
+        </div>
+        <div class="column os">
+            <h3>Operating Systems</h3>
+            <ul>
+                <li>Linux (Ubuntu, CentOS)</li>
+                <li>Windows</li>
+            </ul>
+        </div>
+        <div class="column version-control">
+            <h3>Version Control</h3>
+            <ul>
+                <li>Git</li>
+                <li>GitHub</li>
+            </ul>
+        </div>
+        <div class="column tools">
+            <h3>Tools & Others</h3>
+            <ul>
+                <li>Excel</li>
+                <li>VSCode</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>What People Say About Me</h2>
+        <p>"Shaik is a detail-oriented and diligent professional with a clear understanding of cloud technologies. His passion for continuous learning is truly inspiring."</p>
+        <p>"Shaik brings both technical expertise and an eagerness to learn. He consistently solves problems with a structured approach, making him a valuable team member."</p>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="achievements">
+        <h2>Achievements & Certifications</h2>
+        <ul>
+            <li>DevOps Fundamentals – KodeKloud</li>
+            <li>Jenkins for Beginners - KodeKloud</li>
+            <li>Completed 100+ Leetcode problems</li>
+            <li>Completed 50+ SQL Queries in Coding Ninjas </li>
+        </ul>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <h2>Projects</h2>
+        <div class="project project1">
+            <h3>AWS VPC Architecture</h3>
+            <img src="https://example.com/aws-vpc.png" alt="AWS VPC Project">
+            <p>Designed and implemented a secure and scalable AWS VPC architecture for a client.</p>
+        </div>
+        <div class="project project2">
+            <h3>Sales Data Analysis</h3>
+            <img src="https://example.com/sales-analysis.png" alt="Sales Data Analysis Project">
+            <p>Performed data analysis using Python and SQL to derive insights from sales data.</p>
+        </div>
+        <div class="project project3">
+            <h3>AWS IAM Implementation</h3>
+            <img src="https://example.com/aws-iam.png" alt="AWS IAM Project">
+            <p>Configured IAM policies and roles to ensure secure access control in an AWS environment.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <p>If you'd like to collaborate or have any questions, feel free to reach out!</p>
+        <a href="tel:+919704130778">+91 97041 30778</a><br>
+        <a href="mailto:shaikummarfarooq138@hmail.com" class="button">Email Me</a><br>
+        <a href="C:\Users\ummar\OneDrive\Desktop\ummarfarooqAWS@resume.docx" Download class="button">Download Resume</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Shaik Ummar Farooq</p>
+        <div class="social">
+            <a href="https://www.linkedin.com/in/ummar-farooq-3rd-880a76213/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/UmmarFarooq14?tab=repositories" target="_blank">GitHub</a>
+        </div>
+    </footer>
+</body>
+
+</html>
